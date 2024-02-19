@@ -24,12 +24,12 @@ const Footer = () => {
         </div>
         <div className="flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap">
           {footerLinks.map((section) => (
-            <div key={section}>
+            <div key={section.links}>
               <h4 className="text-white font-montserrat text-2xl leading-normal font-medium mb-6">
                 {section.title}
               </h4>
               <ul>
-                {section.links.map((link) => (
+                {section.links.map((link,i) => (
                   <li
                     className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-grey cursor-pointer"
                     key={link.name}

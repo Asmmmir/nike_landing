@@ -1,17 +1,37 @@
-import { star } from "../assets/icons"
-
-const ReviewCard = ({imgURL, feedback, rating, customerName}) => {
+const ReviewCard = ({ name, lastName, imgURL, country, city }) => {
   return (
-    <div className="flex justify-center items-center flex-col">
-        <img className="rounded-full object-cover w-[120px] h-[120px]" src={imgURL} alt='Customer' />
-        <p className="mt-6 max-w-sm text-center info-text">{feedback}</p>
-        <div className="flex justify-center items-center gap-2">
-            <img className="object-contain m-0" src={star} width={24} height={24} alt="star" />
-            <p className="text-xl font-montserrat text-slate-grey">{rating}</p>
+    <div className="snap-center flex justify-center items-center flex-col w-full">
+      <img
+        style={{ maxWidth: "128px" }}
+        className="rounded-full mb-2 w-[128px] object-cover"
+        src={imgURL}
+        alt="Customer"
+      />
+      <div className="flex justify-center items-center gap-2">
+        <div className="gap-2">
+          <div className="flex gap-2 w-max">
+            <p className="text-sm font-bold font-montserrat text-slate-grey">
+              Country:
+            </p>
+            <p className="text-sm font-montserrat text-slate-grey">{country}</p>
+          </div>
+          <div className="flex gap-2">
+            <p className="text-sm font-bold font-montserrat text-slate-grey">
+              City:
+            </p>
+            <p className="text-sm font-montserrat text-slate-grey">{city}</p>
+          </div>
         </div>
-        <h3 className="font-bold text-center font-palanquin text-2xl mt-2">{customerName}</h3>
+      </div>
+      <div className="flex items-center gap-1 w-full">
+        <p className="text-sm font-bold font-montserrat text-slate-grey">
+          Name:
+        </p>
+        <h3 className="font-palanquin text-md ">{name}</h3>
+        <h3 className="font-palanquin text-md ">{lastName}</h3>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ReviewCard
+export default ReviewCard;
