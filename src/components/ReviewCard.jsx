@@ -15,7 +15,7 @@ const ReviewCard = ({ name, lastName, imgURL, country, city }) => {
             </p>
             <p className="text-sm font-montserrat text-slate-grey">{country}</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 w-max">
             <p className="text-sm font-bold font-montserrat text-slate-grey">
               City:
             </p>
@@ -23,7 +23,7 @@ const ReviewCard = ({ name, lastName, imgURL, country, city }) => {
           </div>
         </div>
       </div>
-      <div className="flex items-center gap-1 w-full">
+      <div className="flex items-center gap-1 w-max">
         <p className="text-sm font-bold font-montserrat text-slate-grey">
           Name:
         </p>
